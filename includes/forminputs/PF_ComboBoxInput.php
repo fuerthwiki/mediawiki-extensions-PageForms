@@ -106,7 +106,7 @@ class PFComboBoxInput extends PFFormInput {
 			$inputAttrs['origname'] = $other_args['origName'];
 		}
 		if ( array_key_exists( 'existing values only', $other_args ) ) {
-			$inputAttrs['existingvaluesonly'] = 'true';
+			$inputAttrs['existingvaluesonly'] = $other_args['existing values only'];
 		}
 		if ( array_key_exists( 'placeholder', $other_args ) ) {
 			$inputAttrs['placeholder'] = $other_args['placeholder'];
