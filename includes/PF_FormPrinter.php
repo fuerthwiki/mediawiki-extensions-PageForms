@@ -663,16 +663,17 @@ END;
 				if ( $month == '' ) {
 					return $year;
 				} elseif ( $day == '' ) {
-					if ( !$wgAmericanDates ) {
+					// by mark.muzenhardt
+					//if ( !$wgAmericanDates ) {
 						// The month is a number - we
 						// need it to be a string, so
 						// that the date will be parsed
 						// correctly if strtotime() is
 						// used.
-						$monthNames = PFFormUtils::getMonthNames();
-						$month = $monthNames[$month - 1];
-					}
-					return "$month $year";
+					//	$monthNames = PFFormUtils::getMonthNames();
+					//	$month = $monthNames[$month - 1];
+					//}
+					return "$year/$month";
 				} else {
 					if ( $wgAmericanDates == true ) {
 						$new_value = "$month $day, $year";
